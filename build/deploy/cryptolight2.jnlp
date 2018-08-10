@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="cryptolight2.jnlp">
+  <information>
+    <title>cryptolight2</title>
+    <vendor>tg.ahuete</vendor>
+    <description>cryptolight2</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="cryptolight2.jar" size="49407" download="eager" />
+    <jar href="libs\controlsfx-8.40.14.jar" size="1215643" download="eager" />
+    <jar href="libs\gson-2.8.5.jar" size="241622" download="eager" />
+    <jar href="libs\jfoenix-8.0.7.jar" size="2631271" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="tg.ahuete.cryptolight.MainApp"  name="cryptolight2" />
+  <update check="background"/>
+</jnlp>

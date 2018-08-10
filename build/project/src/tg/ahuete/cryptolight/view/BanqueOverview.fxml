@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="668.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tg.ahuete.cryptolight.view.BanqueOverviewController">
+	<children>
+		<SplitPane blendMode="DARKEN" dividerPositions="0.29797979797979796" prefHeight="668.0" prefWidth="1024.0" style="-fx-border-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<items>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+					<children>
+						<JFXListView editable="true" layoutY="84.0" prefHeight="582.0" prefWidth="302.0" showTooltip="true" />
+					</children>
+				</AnchorPane>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+					<children>
+						<SplitPane dividerPositions="0.5" layoutX="308.0" layoutY="237.0" orientation="VERTICAL" prefHeight="766.0" prefWidth="714.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<items>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+									<children>
+										<JFXTabPane layoutX="117.0" layoutY="54.0" prefHeight="329.0" prefWidth="712.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+											<Tab text="Bittrex">
+												<content>
+													<ScrollPane>
+														<content>
+															<AnchorPane>
+																<children>
+																	<Label layoutX="14.0" layoutY="14.0" text="Detail du compte" />
+																	<Label layoutX="14.0" layoutY="55.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="17.0" prefWidth="84.0" text="N° portefeuille" />
+																	<Label layoutX="14.0" layoutY="80.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="17.0" prefWidth="84.0" text="Balance" />
+																	<Label layoutX="201.0" layoutY="80.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="84.0" text="Disponible" />
+																	<Label fx:id="bittrexdepositAdressLabel" layoutX="108.0" layoutY="55.0" prefHeight="17.0" prefWidth="302.0" />
+																	<Label fx:id="bitrexbalanceLabel" layoutX="98.0" layoutY="80.0" prefHeight="17.0" prefWidth="98.0" />
+																	<Label fx:id="bitrexavailabelLabel" layoutX="285.0" layoutY="80.0" prefHeight="17.0" prefWidth="116.0" />
+																	<ImageView fitHeight="20.0" fitWidth="21.0" layoutX="381.0" layoutY="22.0" onMouseClicked="#handleButtonGetAdress" pickOnBounds="true" preserveRatio="true">
+																		<image><Image url="@images/resync.png" /></image>
+																	</ImageView>
+																	<JFXButton layoutX="365.0" layoutY="43.0" onAction="#handleButtonGetAdress" text="Sync" />
+																</children>
+															</AnchorPane>
+														</content>
+													</ScrollPane>
+												</content>
+											</Tab>
+											<Tab text="Cryptopia">
+												<content>
+													<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+														
+														<children>
+															<Label layoutX="14.0" layoutY="14.0" text="Detail du compte" />
+															<Label layoutX="14.0" layoutY="55.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="17.0" prefWidth="84.0" text="N° portefeuille" />
+															<Label layoutX="14.0" layoutY="80.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="17.0" prefWidth="84.0" text="Balance" />
+															<Label layoutX="201.0" layoutY="80.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="84.0" text="Disponible" />
+															<Label fx:id="cryptopiadepositAdressLabel" layoutX="108.0" layoutY="55.0" prefHeight="17.0" prefWidth="302.0" />
+															<Label fx:id="cryptopiabalanceLabel" layoutX="98.0" layoutY="80.0" prefHeight="17.0" prefWidth="98.0" />
+															<Label fx:id="cryptopiaavailabelLabel" layoutX="285.0" layoutY="80.0" prefHeight="17.0" prefWidth="116.0" />
+															<ImageView fitHeight="20.0" fitWidth="21.0" layoutX="381.0" layoutY="22.0" onMouseClicked="#handleButtonGetAdress" pickOnBounds="true" preserveRatio="true">
+																<image><Image url="@images/resync.png" /></image>
+															</ImageView>
+															<JFXButton layoutX="365.0" layoutY="43.0" onAction="#handleButtonGetAdress" text="Sync" />
+														</children>
+													</AnchorPane>
+												</content>
+											</Tab>
+											<Tab text="Nova">
+												<content>
+													<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+												</content>
+											</Tab>
+											<Tab text="C-Cex">
+												<content>
+													<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+												</content>
+											</Tab>
+											<Tab text="Crex24">
+												<content>
+													<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+												</content>
+											</Tab>
+											<Tab text="Poloniex">
+												<content>
+													<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+												</content>
+											</Tab>
+											<Tab text="Kraken">
+												<content>
+													<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+												</content>
+											</Tab>
+											<Tab text="Gdax">
+												<content>
+													<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+												</content>
+											</Tab>
+											<Tab text="Yobit">
+												<content>
+													<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+												</content>
+											</Tab>
+
+										</JFXTabPane>
+									</children>
+								</AnchorPane>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+							</items>
+						</SplitPane>
+					</children>
+				</AnchorPane>
+			</items>
+		</SplitPane>
+	</children>
+</AnchorPane>

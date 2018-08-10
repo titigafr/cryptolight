@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<params>
+    <param>
+        <banque>Bittrex</banque>
+        <PublicApi>e9aac1727dd547e5915cd9b43e98dd79</PublicApi>
+        <SecretApi>cb48ec8f1b954fb7bdfc54d089841105</SecretApi>
+    </param>
+    <param>
+        <banque>Cryptopia</banque>
+        <PublicApi>a1369f2b19814299b138c49fd577c223</PublicApi>
+        <SecretApi>6+ASRH9wpD8ok1FFYoU+X1AuIXMm4ubvmaK7PGHmnF0=</SecretApi>
+    </param>
+    <param>
+        <banque>Cryptopia</banque>
+        <PublicApi>YZ1HDA2W-QRKQI0EU-K8YCPHFY-A7GFQTDF</PublicApi>
+        <SecretApi>d0ab2c3ab709b23c288f8a1b7b1adb0effd22672161f15ec0e1798dd09520ce08a52a239b3d8b8e3dfe3b88a22d751422d3857ffad882f77291d9f00bc6b1386</SecretApi>
+    </param>
+</params>
