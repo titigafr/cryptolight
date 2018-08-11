@@ -66,8 +66,8 @@ public class MainApp extends Application {
             // Give the controller access to the main app.
             RootLayoutController controller = loader.getController();
             controller.setMainApp(this);
-
             primaryStage.show();
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
