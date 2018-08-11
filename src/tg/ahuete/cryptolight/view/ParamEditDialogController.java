@@ -3,7 +3,9 @@ package tg.ahuete.cryptolight.view;
 import com.jfoenix.controls.JFXListView;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
+import tg.ahuete.cryptolight.MainApp;
 import tg.ahuete.cryptolight.model.Banque;
+import tg.ahuete.cryptolight.model.SimpleBanqueListCell;
 
 public class ParamEditDialogController {
 
@@ -18,8 +20,12 @@ public class ParamEditDialogController {
 	
 	@FXML
     private void initialize() {
-		//Banque banque = new Banque("Test1","abcdefghijklmnop","azertyuiopazertyuiop","Bitrex");
-		listebanque.getItems().add(new Banque("Test1","abcdefghijklmnop","azertyuiopazertyuiop","Bitrex"));
+		listebanque.setCellFactory(lv -> new SimpleBanqueListCell());
+		
+		for (Banque itemInXml : MainApp.banqueData) {
+			listebanque.getItems().add(new Banque(itemInXml.getName(), itemInXml.getPublicApi(), itemInXml.getSecretApi(), itemInXml.getBanqueType()));
+			System.out.println(itemInXml.getName());
+		}
 	}
 	
 	public boolean isOkClicked() {
@@ -36,6 +42,5 @@ public class ParamEditDialogController {
     private void handleCancel() {
         dialogStage.close();
     }
-    }
+}
 	
-

@@ -41,11 +41,11 @@ public class Banque {
 	}
 	
 	public void setPublicApi(String publicApi) {
-		this.banqueName = publicApi;
+		this.publicApi = publicApi;
 	}
 	
 	public void setSecretApi(String secretApi) {
-		this.banqueName = secretApi;
+		this.secretApi = secretApi;
 	}
 	
 	public void setBanqueType(String banqueType) {
