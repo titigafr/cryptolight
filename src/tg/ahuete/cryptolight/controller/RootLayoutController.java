@@ -1,4 +1,4 @@
-package tg.ahuete.cryptolight.view;
+package tg.ahuete.cryptolight.controller;
 
 import java.io.IOException;
 

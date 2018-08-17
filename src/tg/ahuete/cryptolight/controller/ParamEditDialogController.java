@@ -1,4 +1,4 @@
-package tg.ahuete.cryptolight.view;
+package tg.ahuete.cryptolight.controller;
 
 import com.jfoenix.controls.JFXListView;
 import javafx.fxml.FXML;
@@ -23,8 +23,8 @@ public class ParamEditDialogController {
 		listebanque.setCellFactory(lv -> new SimpleBanqueListCell());
 		
 		for (Banque itemInXml : MainApp.banqueData) {
-			listebanque.getItems().add(new Banque(itemInXml.getName(), itemInXml.getPublicApi(), itemInXml.getSecretApi(), itemInXml.getBanqueType()));
-			System.out.println(itemInXml.getName());
+			listebanque.getItems().add(new Banque(itemInXml.getNomSite(), itemInXml.getPublicApi(), itemInXml.getSecretApi(), itemInXml.getBanqueType()));
+			System.out.println(itemInXml.getNomSite());
 		}
 	}
 	

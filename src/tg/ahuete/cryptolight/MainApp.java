@@ -19,10 +19,11 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import tg.ahuete.cryptolight.controller.AccueilPanelController;
+import tg.ahuete.cryptolight.controller.BanqueOverviewController;
+import tg.ahuete.cryptolight.controller.RootLayoutController;
 import tg.ahuete.cryptolight.model.Banque;
 import tg.ahuete.cryptolight.model.BanqueListWrapper;
-import tg.ahuete.cryptolight.view.BanqueOverviewController;
-import tg.ahuete.cryptolight.view.RootLayoutController;
 
 
 public class MainApp extends Application {
@@ -32,8 +33,10 @@ public class MainApp extends Application {
     public static ObservableList<Banque> banqueData = FXCollections.observableArrayList();
     
     public MainApp() {
-        //dans cette partie on va charger la liste des banques à partir
-    	//d'un fichier XML (voir pour mettre en place une base de donnée serait peut-etre mieux pour la sécurisation
+        //dans cette partie on va charger la liste des banques à partir d'un fichier XML 
+    	//voir pour mettre en place une base de donnée serait peut-etre mieux pour la sécurisation
+    	loadBanqueDataFromFile();
+        
     }
     
     @Override
@@ -71,10 +74,7 @@ public class MainApp extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        File file = new File("ressources/banques.xml");
-        if (file != null) {
-            loadBanqueDataFromFile(file);
-        }
+        
         
     }
     
@@ -82,13 +82,13 @@ public class MainApp extends Application {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/BanqueOverview.fxml"));
-            AnchorPane banqueOverview = (AnchorPane) loader.load();
+            loader.setLocation(MainApp.class.getResource("view/AccueilPanel.fxml"));
+            AnchorPane accueilPanel = (AnchorPane) loader.load();
 
             // Set person overview into the center of root layout.
-            rootLayout.setCenter(banqueOverview);
+            rootLayout.setCenter(accueilPanel);
          // Give the controller access to the main app.
-            BanqueOverviewController controller = loader.getController();
+            AccueilPanelController controller = loader.getController();
             controller.setMainApp(this);
 
         } catch (IOException e) {
@@ -106,8 +106,9 @@ public class MainApp extends Application {
         launch(args);
     }
     
-    public void loadBanqueDataFromFile(File file) {
-        try {
+    public void loadBanqueDataFromFile() {
+    	File file = new File("ressources/banques.xml");
+    	try {
             JAXBContext context = JAXBContext
                     .newInstance(BanqueListWrapper.class);
             Unmarshaller um = context.createUnmarshaller();

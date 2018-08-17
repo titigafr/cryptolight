@@ -7,11 +7,11 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 
-<AnchorPane prefHeight="517.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tg.ahuete.cryptolight.view.ParamEditDialogController">
+<AnchorPane prefHeight="517.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tg.ahuete.cryptolight.controller.ParamEditDialogController">
    <children>
       <ButtonBar layoutX="216.0" layoutY="478.0" prefHeight="40.0" prefWidth="216.0" style="-fx-background-color: #4f9dc5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <buttons>
-            <JFXButton buttonType="RAISED" style="-fx-background-color: #a7d889;" text="Ok">
+            <JFXButton buttonType="RAISED" onAction="#handleOk" style="-fx-background-color: #a7d889;" text="Ok">
                <ripplerFill>
                   <LinearGradient endX="1.0" endY="1.0" startX="0.5523809523809524" startY="0.6333333333333333">
                      <stops>
@@ -21,7 +21,7 @@
                   </LinearGradient>
                </ripplerFill>
             </JFXButton>
-            <JFXButton buttonType="RAISED" cancelButton="true" style="-fx-background-color: #c55a4f;" text="Annuler">
+            <JFXButton buttonType="RAISED" cancelButton="true" onAction="#handleCancel" style="-fx-background-color: #c55a4f;" text="Annuler">
                <ripplerFill>
                   <LinearGradient endX="1.0" endY="1.0" startX="0.5523809523809524" startY="0.6333333333333333">
                      <stops>

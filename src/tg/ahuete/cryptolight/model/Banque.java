@@ -1,27 +1,27 @@
 package tg.ahuete.cryptolight.model;
 
 public class Banque {
-	private String banqueName;
+	private String nomSite;
 	private String publicApi;
 	private String secretApi;
 	private String banqueType;
 	    	    
 	public Banque() {
-	    	banqueName=null;
+	    	nomSite=null;
 	    	publicApi = null;
 	    	secretApi=null;
 	    	banqueType=null; 
 	}
 	
 	public Banque(String string, String string2, String string3, String string4) {
-		this.setName(string);
+		this.setNomSite(string);
 		this.setPublicApi(string2);
 		this.setSecretApi(string3);
 		this.setBanqueType(string4);
 	}
 
-	public String getName() {
-		return this.banqueName;
+	public String getNomSite() {
+		return this.nomSite;
 	}
 	
 	public String getPublicApi() {
@@ -36,8 +36,8 @@ public class Banque {
 		return this.banqueType;
 	}
 	
-	public void setName(String name) {
-		this.banqueName = name;
+	public void setNomSite(String name) {
+		this.nomSite = name;
 	}
 	
 	public void setPublicApi(String publicApi) {

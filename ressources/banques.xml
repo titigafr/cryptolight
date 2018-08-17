@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Banques>
     <Banque>
-        <banqueName>BITTREX</banqueName>
         <publicApi>e9aac1727dd547e5915cd9b43e98dd79</publicApi>
         <secretApi>cb48ec8f1b954fb7bdfc54d089841105</secretApi>
         <banqueType>bittrex</banqueType>
+        <nomSite>BITTREX</nomSite>
     </Banque>
     <Banque>
-        <banqueName>CRYPTOPIA</banqueName>
         <publicApi>a1369f2b19814299b138c49fd577c223</publicApi>
         <secretApi>6+ASRH9wpD8ok1FFYoU+X1AuIXMm4ubvmaK7PGHmnF0=</secretApi>
         <banqueType>cryptopia</banqueType>
+        <nomSite>CRYPTOPIA</nomSite>
     </Banque>
     <Banque>
-        <banqueName>POLONIEX</banqueName>
         <publicApi>YZ1HDA2W-QRKQI0EU-K8YCPHFY-A7GFQTDF</publicApi>
         <secretApi>d0ab2c3ab709b23c288f8a1b7b1adb0effd22672161f15ec0e1798dd09520ce08a52a239b3d8b8e3dfe3b88a22d751422d3857ffad882f77291d9f00bc6b1386</secretApi>
         <banqueType>poloniex</banqueType>
+        <nomSite>POLONIEX</nomSite>
     </Banque>
 </Banques>
